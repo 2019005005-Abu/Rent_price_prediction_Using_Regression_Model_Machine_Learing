@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import warnings as w
+import pandas as pd
+
+# Suppress warnings
+w.filterwarnings('ignore')
+
+
+df = pd.read_csv('./data__set/Dhaka_Rent.csv', sep=';')
+print("First 3 rows of the dataset:")
+print(df.head(3))
+print("\nShape of the dataset:")
+print(df.shape)
+x=df['area']
+y=df['rent'];
+x__mean=np.mean(x);
+y__mean=np.mean(y);
+print(x__mean, y__mean);
+dev_x=x.x__mean;
+dev_y=y.y__mean;
+m=np.sum(dev_x*dev_y)/np.sum(dev_x**2);
+print(m);
+
+
+
+
+
